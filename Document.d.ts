@@ -187,32 +187,32 @@ declare class Document
 	/**
 	 * Read-only. The brushes contained in the document.
 	 * @const
-	 * @type {Brushes} {@link Brushes} collection object
+	 * @type {Brushes|Brush[]} {@link Brushes} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly brushes:Brushes;
+	readonly brushes:Brushes|Brush[];
 
 	/**
 	 * Read-only. The list of character styles in this document.
 	 * @const
-	 * @type {CharacterStyles} {@link CharacterStyles} collection object
+	 * @type {CharacterStyles|CharacterStyle[]} {@link CharacterStyles} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly characterStyles:CharacterStyles;
+	readonly characterStyles:CharacterStyles|CharacterStyle[];
 
 	/**
 	 * Read-only. The compound path items contained in the document.
 	 * @const
-	 * @type {CompoundPathItems} {@link CompoundPathItems} collection object
+	 * @type {CompoundPathItems|CompoundPathItem[]} {@link CompoundPathItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly compoundPathItems:CompoundPathItems;
+	readonly compoundPathItems:CompoundPathItems|CompoundPathItem[];
 
 	/**
 	 * The boundary of the document’s cropping box for output, or <b>null</b> if no value has been set.
@@ -235,12 +235,12 @@ declare class Document
 	/**
 	 * Read-only. The datasets contained in the document.
 	 * @const
-	 * @type {Datasets} {@link Datasets} collection object
+	 * @type {Datasets|Dataset[]} {@link Datasets} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly dataSets:Datasets;
+	readonly dataSets:Datasets|Dataset[];
 
 	/**
 	 * The color to use to fill new paths if {@link defaultFilled} is <b>true</b>.
@@ -384,42 +384,42 @@ declare class Document
 	/**
 	 * Read-only. The gradients contained in the document.
 	 * @const
-	 * @type {Gradients} {@link Gradients} collection object
+	 * @type {Gradients|Gradient[]} {@link Gradients} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly gradients:Gradients;
+	readonly gradients:Gradients|Gradient[];
 
 	/**
 	 * Read-only. The graphic styles defined in this document.
 	 * @const
-	 * @type {GraphicStyles} {@link GraphicStyles} collection object
+	 * @type {GraphicStyles|GraphicStyle[]} {@link GraphicStyles} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly graphicStyles:GraphicStyles;
+	readonly graphicStyles:GraphicStyles|GraphicStyle[];
 
 	/**
 	 * Read-only. The graph art items in this document.
 	 * @const
-	 * @type {GraphItems} {@link GraphItems} collection object
+	 * @type {GraphItems|GraphItem[]} {@link GraphItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly graphItems:GraphItems;
+	readonly graphItems:GraphItems|GraphItem[];
 
 	/**
 	 * Read-only. The group items contained in the document.
 	 * @const
-	 * @type {GroupItems} {@link GroupItems} collection object
+	 * @type {GroupItems|GroupItem[]} {@link GroupItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly groupItems:GroupItems;
+	readonly groupItems:GroupItems|GroupItem[];
 
 	/**
 	 * Read-only. The height of the document.
@@ -454,32 +454,32 @@ declare class Document
 	/**
 	 * Read-only. The layers contained in the document.
 	 * @const
-	 * @type {Layers} {@link Layers} collection object
+	 * @type {Layers|Layer[]} {@link Layers} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly layers:Layers;
+	readonly layers:Layers|Layer[];
 
 	/**
 	 * Read-only. The legacy text items in the document.
 	 * @const
-	 * @type {LegacyTextItems} {@link LegacyTextItems} collection object
+	 * @type {LegacyTextItems|LegacyTextItem[]} {@link LegacyTextItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly legacyTextItems:LegacyTextItems;
+	readonly legacyTextItems:LegacyTextItems|LegacyTextItem[];
 
 	/**
 	 * Read-only. The mesh art items contained in the document.
 	 * @const
-	 * @type {MeshItems} {@link MeshItems} collection object
+	 * @type {MeshItems|MeshItem[]} {@link MeshItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly meshItems:MeshItems;
+	readonly meshItems:MeshItems|MeshItem[];
 
 	/**
 	 * Read-only. A list of names of predefined Mojikumi sets which specify the spacing for the layout and composition of Japanese text.
@@ -524,12 +524,12 @@ declare class Document
 	/**
 	 * Read-only. The page items (all art item classes) contained in the document.
 	 * @const
-	 * @type {PageItems} {@link PageItems} collection object
+	 * @type {PageItems|PageItem[]} {@link PageItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pageItems:PageItems;
+	readonly pageItems:PageItems|PageItem[];
 
 	/**
 	 * The zero-point of the page in the document without margins, relative to the overall height and width.
@@ -543,12 +543,12 @@ declare class Document
 	/**
 	 * Read-only. The list of paragraph styles in this document.
 	 * @const
-	 * @type {ParagraphStyles} {@link ParagraphStyles} collection object
+	 * @type {ParagraphStyles|ParagraphStyle[]} {@link ParagraphStyles} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly paragraphStyles:ParagraphStyles;
+	readonly paragraphStyles:ParagraphStyles|ParagraphStyle[];
 
 	/**
 	 * Read-only. The application that contains this document.
@@ -573,42 +573,42 @@ declare class Document
 	/**
 	 * Read-only. The path items contained in this document.
 	 * @const
-	 * @type {PathItems} {@link PathItems} collection object
+	 * @type {PathItems|PathItem[]} {@link PathItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pathItems:PathItems;
+	readonly pathItems:PathItems|PathItem[];
 
 	/**
 	 * Read-only. The patterns contained in this document.
 	 * @const
-	 * @type {Patterns} {@link Patterns} collection object
+	 * @type {Patterns|Pattern[]} {@link Patterns} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly patterns:Patterns;
+	readonly patterns:Patterns|Pattern[];
 
 	/**
 	 * Read-only. The placed items contained in this document.
 	 * @const
-	 * @type {PlacedItems} {@link PlacedItems} collection object
+	 * @type {PlacedItems|PlacedItem[]} {@link PlacedItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly placedItems:PlacedItems;
+	readonly placedItems:PlacedItems|PlacedItem[];
 
 	/**
 	 * Read-only. The plug-in items contained in this document.
 	 * @const
-	 * @type {PluginItems} {@link PluginItems} collection object
+	 * @type {PluginItems|PluginItem[]} {@link PluginItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pluginItems:PluginItems;
+	readonly pluginItems:PluginItems|PluginItem[];
 
 	/**
 	 * Read-only. If <b>true</b>, this document should be printed as tiled output.
@@ -632,12 +632,12 @@ declare class Document
 	/**
 	 * Read-only. The raster items contained in this document.
 	 * @const
-	 * @type {RasterItems} {@link RasterItems} collection object
+	 * @type {RasterItems|RasterItem[]} {@link RasterItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly rasterItems:RasterItems;
+	readonly rasterItems:RasterItems|RasterItem[];
 
 	/**
 	 * The zero-point of the rulers in the document relative to the bottom left of the document.
@@ -700,12 +700,12 @@ declare class Document
 	/**
 	 * Read-only. The spot colors contained in this document.
 	 * @const
-	 * @type {Spots} {@link Spots} collection object
+	 * @type {Spots|Spot[]} {@link Spots} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly spots:Spots;
+	readonly spots:Spots|Spot[];
 
 	/**
 	 * Read-only. If <b>true</b>, the file is a stationery file.
@@ -720,72 +720,72 @@ declare class Document
 	/**
 	 * Read-only. The story items in this document.
 	 * @const
-	 * @type {Stories} {@link Stories} collection object
+	 * @type {Stories|Story[]} {@link Stories} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly stories:Stories;
+	readonly stories:Stories|Story[];
 
 	/**
 	 * Read-only. The swatches in this document.
 	 * @const
-	 * @type {Swatches} {@link Swatches} collection object
+	 * @type {Swatches|Swatch[]} {@link Swatches} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly swatches:Swatches;
+	readonly swatches:Swatches|Swatch[];
 
 	/**
 	 * Read-only. The swatch groups in this document.
 	 * @const
-	 * @type {SwatchGroups} {@link SwatchGroups} collection object
+	 * @type {SwatchGroups|SwatchGroup[]} {@link SwatchGroups} collection object
 	 * @see {@link Document}
 	 * @since CS4
 	 * @version CS4
 	 */
-	readonly swatchGroups:SwatchGroups;
+	readonly swatchGroups:SwatchGroups|SwatchGroup[];
 
 	/**
 	 * Read-only. The art items in the document linked to symbols.
 	 * @const
-	 * @type {SymbolItems} {@link SymbolItems} collection object
+	 * @type {SymbolItems|SymbolItem[]} {@link SymbolItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly symbolItems:SymbolItems;
+	readonly symbolItems:SymbolItems|SymbolItem[];
 
 	/**
 	 * Read-only. The symbols in this document.
 	 * @const
-	 * @type {Symbols} {@link Symbols} collection object
+	 * @type {Symbols|Symbol[]} {@link Symbols} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly symbols:Symbols;
+	readonly symbols:Symbols|Symbol[];
 
 	/**
 	 * Read-only. The tags in this document.
 	 * @const
-	 * @type {Tags} {@link Tags} collection object
+	 * @type {Tags|Tag[]} {@link Tags} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly tags:Tags;
+	readonly tags:Tags|Tag[];
 
 	/**
 	 * Read-only. The text frames in this document.
 	 * @const
-	 * @type {TextFrameItems} {@link TextFrameItems} collection object
+	 * @type {TextFrameItems|TextFrameItem[]} {@link TextFrameItems} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS5
 	 */
-	readonly textFrames:TextFrameItems;
+	readonly textFrames:TextFrameItems|TextFrameItem[];
 
 	/**
 	 * Read-only. If <b>true</b>, full pages should be tiled when printing this document.
@@ -820,12 +820,12 @@ declare class Document
 	/**
 	 * Read-only. The variables defined in this document.
 	 * @const
-	 * @type {Variables} {@link Variables} collection object
+	 * @type {Variables|Variable[]} {@link Variables} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly variables:Variables;
+	readonly variables:Variables|Variable[];
 
 	/**
 	 * If <b>true</b>, the variables are locked.
@@ -839,12 +839,12 @@ declare class Document
 	/**
 	 * Read-only. The views contained in this document.
 	 * @const
-	 * @type {Views} {@link Views} collection object
+	 * @type {Views|View[]} {@link Views} collection object
 	 * @see {@link Document}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly views:Views;
+	readonly views:Views|View[];
 
 	/**
 	 * Read-only. The visible bounds of the document, including stroke width of any objects in the illustration.
