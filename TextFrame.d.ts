@@ -130,12 +130,12 @@ declare class TextFrame extends PageItem
 	/**
 	 * Read-only. All the characters in this text frame.
 	 * @const
-	 * @type {Characters} {@link Characters} collection object
+	 * @type {Characters|TextRange[]} {@link Characters} collection object
 	 * @see {@link TextFrame}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly characters:Characters;
+	readonly characters:Characters|TextRange[];
 
 	/**
 	 * The column count in the text frame (area text only).
@@ -242,12 +242,12 @@ declare class TextFrame extends PageItem
 	/**
 	 * Read-only. All the insertion points in this text range.
 	 * @const
-	 * @type {InsertionPoints} {@link InsertionPoints} collection object
+	 * @type {InsertionPoints|InsertionPoint[]} {@link InsertionPoints} collection object
 	 * @see {@link TextFrame}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly insertionPoints:InsertionPoints;
+	readonly insertionPoints:InsertionPoints|InsertionPoint[];
 
 	/**
 	 * If <b>true</b>, the artwork is isolated.
@@ -291,7 +291,7 @@ declare class TextFrame extends PageItem
 	/**
 	 * Read-only. All the lines in this text frame.
 	 * @const
-	 * @type {Lines} {@link Lines} collection object
+	 * @type {Lines|TextRange[]} {@link Lines} collection object
 	 * @see {@link TextFrame}
 	 * @since CS2
 	 * @version CS2
@@ -374,12 +374,12 @@ declare class TextFrame extends PageItem
 	/**
 	 * Read-only. All the paragraphs in this text frame.
 	 * @const
-	 * @type {Paragraphs} {@link Paragraphs} collection object
+	 * @type {Paragraphs|TextRange[]} {@link Paragraphs} collection object
 	 * @see {@link TextFrame}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly paragraphs:Paragraphs;
+	readonly paragraphs:Paragraphs|TextRange[];
 
 	/**
 	 * Read-only. The parent of this object.
@@ -476,12 +476,12 @@ declare class TextFrame extends PageItem
 	/**
 	 * Read-only. The tags contained in this item.
 	 * @const
-	 * @type {Tags} {@link Tags} collection object
+	 * @type {Tags|Tag[]} {@link Tags} collection object
 	 * @see {@link TextFrame}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly tags:Tags;
+	readonly tags:Tags|Tag[];
 
 	/**
 	 * The path item associated with the text frame. Note: Valid only when {@link TextFrame#kind} is area or path.
@@ -505,12 +505,12 @@ declare class TextFrame extends PageItem
 	/**
 	 * Read-only. All the text in this text frame.
 	 * @const
-	 * @type {TextRanges} {@link TextRanges} collection object
+	 * @type {TextRanges|TextRange[]} {@link TextRanges} collection object
 	 * @see {@link TextFrame}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly textRanges:TextRanges;
+	readonly textRanges:TextRanges|TextRange[];
 
 	/**
 	 * Read-only. The selected text range(s) in the text frame.
@@ -581,12 +581,12 @@ declare class TextFrame extends PageItem
 	/**
 	 * Read-only. All the words in this text frame.
 	 * @const
-	 * @type {Words} {@link Words} collection objects
+	 * @type {Words|TextRange[]} {@link Words} collection objects
 	 * @see {@link TextFrame}
 	 * @since CS3
 	 * @version CS3
 	 */
-	readonly words:Words;
+	readonly words:Words|TextRange[];
 
 	/**
 	 * If <b>true</b>, the text frame object should be wrapped inside this object.
