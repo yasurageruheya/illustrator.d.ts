@@ -228,12 +228,12 @@ declare class PageItem
 
 	/**
 	 * The collection of tags associated with this page item.
-	 * @type {Tags} {@link Tags} collection object
+	 * @type {Tags|Tag[]} {@link Tags} collection object
 	 * @see {@link PageItem}
 	 * @since CS4
 	 * @version CS4
 	 */
-	tags:Tags;
+	tags:Tags|Tag[];
 
 	/**
 	 * The top position of the art item.

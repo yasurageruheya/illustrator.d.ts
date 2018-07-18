@@ -272,12 +272,12 @@ declare class PlacedItem extends PageItem
 	/**
 	 * Read-only. The tags contained in this item.
 	 * @const
-	 * @type {Tags} {@link Tags} collection object
+	 * @type {Tags|Tag[]} {@link Tags} collection object
 	 * @see {@link PlacedItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly tags:Tags;
+	readonly tags:Tags|Tag[];
 
 	/**
 	 * The position of the top of the item (in points, measured from the bottom of the page).

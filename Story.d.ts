@@ -53,22 +53,22 @@ declare class Story
 	/**
 	 * Read-only. All the characters in this story.
 	 * @const
-	 * @type {Characters} {@link Characters} collection object
+	 * @type {Characters|TextRange[]} {@link Characters} collection object
 	 * @see {@link Story}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly characters:Characters;
+	readonly characters:Characters|TextRange[];
 
 	/**
 	 * Read-only. All the insertion points in this story.
 	 * @const
-	 * @type {InsertionPoints} {@link InsertionPoints} collection object
+	 * @type {InsertionPoints|InsertionPoint[]} {@link InsertionPoints} collection object
 	 * @see {@link Story}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly insertionPoints:InsertionPoints;
+	readonly insertionPoints:InsertionPoints|InsertionPoint[];
 
 	/**
 	 * Read-only. The number of characters in the story.
@@ -83,7 +83,7 @@ declare class Story
 	/**
 	 * Read-only. All the lines in this story.
 	 * @const
-	 * @type {Lines} {@link Lines} collection object
+	 * @type {Lines|TextRange[]} {@link Lines} collection object
 	 * @see {@link Story}
 	 * @since CS2
 	 * @version CS2
@@ -93,12 +93,12 @@ declare class Story
 	/**
 	 * Read-only. All the paragraphs in this story.
 	 * @const
-	 * @type {Paragraphs} {@link Paragraphs} collection object
+	 * @type {Paragraphs|TextRange[]} {@link Paragraphs} collection object
 	 * @see {@link Story}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly paragraphs:Paragraphs;
+	readonly paragraphs:Paragraphs|TextRange[];
 
 	/**
 	 * Read-only. The object’s container.
@@ -113,12 +113,12 @@ declare class Story
 	/**
 	 * Read-only. The text frame items in this story.
 	 * @const
-	 * @type {TextFrameItems} {@link TextFrameItems} collection object
+	 * @type {TextFrameItems|TextFrameItem[]} {@link TextFrameItems} collection object
 	 * @see {@link Story}
 	 * @since CS2
 	 * @version CS5
 	 */
-	readonly textFrames:TextFrameItems;
+	readonly textFrames:TextFrameItems|TextFrameItem[];
 
 	/**
 	 * Read-only. The text range of the story.
@@ -133,12 +133,12 @@ declare class Story
 	/**
 	 * Read-only. All the text ranges in the story.
 	 * @const
-	 * @type {TextRanges} {@link TextRanges} collection object
+	 * @type {TextRanges|TextRange[]} {@link TextRanges} collection object
 	 * @see {@link Story}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly textRanges:TextRanges;
+	readonly textRanges:TextRanges|TextRange[];
 
 	/**
 	 * Read-only. The selected text ranges in the story.
@@ -163,10 +163,10 @@ declare class Story
 	/**
 	 * Read-only. All the words in the story.
 	 * @const
-	 * @type {Words} {@link Words} collection object
+	 * @type {Words|TextRange[]} {@link Words} collection object
 	 * @see {@link Story}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly words:Words;
+	readonly words:Words|TextRange[];
 }
