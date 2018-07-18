@@ -56,7 +56,7 @@ declare class TextRange
 	/**
 	 * Read-only. The character properties for the text range.
 	 * @const
-	 * @type {CharacterAttributes} {@link CharacterAttributes} collection object
+	 * @type {CharacterAttributes} {@link CharacterAttributes} object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
@@ -75,22 +75,22 @@ declare class TextRange
 	/**
 	 * Read-only. All the characters in this text range.
 	 * @const
-	 * @type {Characters} {@link Characters} collection object
+	 * @type {Characters|TextRange[]} {@link Characters} collection object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly characters:Characters;
+	readonly characters:Characters|TextRange[];
 
 	/**
 	 * Read-only. All referenced character styles in the text range.
 	 * @const
-	 * @type {CharacterStyles} {@link CharacterStyles} collection object
+	 * @type {CharacterStyles|CharacterStyle[]} {@link CharacterStyles} collection object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly characterStyles:CharacterStyles;
+	readonly characterStyles:CharacterStyles|CharacterStyle[];
 
 	/**
 	 * The text string.
@@ -104,12 +104,12 @@ declare class TextRange
 	/**
 	 * Read-only. All the insertion points in this text range.
 	 * @const
-	 * @type {InsertionPoints} {@link InsertionPoints} collection object
+	 * @type {InsertionPoints|InsertionPoint[]} {@link InsertionPoints} collection object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly insertionPoints:InsertionPoints;
+	readonly insertionPoints:InsertionPoints|InsertionPoint[];
 
 	/**
 	 * Controls the spacing between two characters, in thousandths of an em. An integer.
@@ -132,7 +132,7 @@ declare class TextRange
 	/**
 	 * Read-only. All the lines in this text range.
 	 * @const
-	 * @type {Lines} {@link Lines} collection object
+	 * @type {Lines|TextRange[]} {@link Lines} collection object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
@@ -142,7 +142,7 @@ declare class TextRange
 	/**
 	 * Read-only. The paragraph properties for the text range.
 	 * @const
-	 * @type {ParagraphAttributes} {@link ParagraphAttributes} collection object
+	 * @type {ParagraphAttributes} {@link ParagraphAttributes} object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
@@ -152,22 +152,22 @@ declare class TextRange
 	/**
 	 * Read-only. All the paragraphs in this text range.
 	 * @const
-	 * @type {Paragraphs} {@link Paragraphs} collection object
+	 * @type {Paragraphs|TextRange[]} {@link Paragraphs} collection object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly paragraphs:Paragraphs;
+	readonly paragraphs:Paragraphs|TextRange[];
 
 	/**
 	 * Read-only. All referenced paragraph styles in the text range.
 	 * @const
-	 * @type {ParagraphStyles} {@link ParagraphStyles} collection object
+	 * @type {ParagraphStyles|ParagraphStyle[]} {@link ParagraphStyles} collection object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly paragraphStyles:ParagraphStyles;
+	readonly paragraphStyles:ParagraphStyles|ParagraphStyle[];
 
 	/**
 	 * Read-only. The object’s container.
@@ -192,12 +192,12 @@ declare class TextRange
 	/**
 	 * Read-only. All of the text in this text range.
 	 * @const
-	 * @type {TextRanges} {@link TextRanges} collection object
+	 * @type {TextRanges|TextRange[]} {@link TextRanges} collection object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly textRanges:TextRanges;
+	readonly textRanges:TextRanges|TextRange[];
 
 	/**
 	 * Read-only. The selected text ranges in the text range.
@@ -222,12 +222,12 @@ declare class TextRange
 	/**
 	 * Read-only. All the words contained in this text range.
 	 * @const
-	 * @type {Words} {@link Words} collection object
+	 * @type {Words|TextRange[]} {@link Words} collection object
 	 * @see {@link TextRange}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly words:Words;
+	readonly words:Words|TextRange[];
 
 	/**
 	 * Changes the capitalization of text.
