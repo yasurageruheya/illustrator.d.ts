@@ -149,12 +149,12 @@ declare class Application
 	/**
 	 * Read-only. The documents in the application.
 	 * @const
-	 * @type {Documents} {@link Documents} collection object
+	 * @type {Documents|Document[]} {@link Documents} collection object
 	 * @see {@link Application}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly documents:Documents;
+	readonly documents:Documents|Document[];
 
 	/**
 	 * Read-only. The list of flattener style names currently available for use.
@@ -287,12 +287,12 @@ declare class Application
 	/**
 	 * Read-only. The installed fonts.
 	 * @const
-	 * @type {TextFonts} {@link TextFonts} collection object
+	 * @type {TextFonts|TextFont[]} {@link TextFonts} collection object
 	 * @see {@link Application}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly textFonts:TextFonts;
+	readonly textFonts:TextFonts|TextFont[];
 
 	/**
 	 * Read-only. The list of preset tracing-options names available for use.

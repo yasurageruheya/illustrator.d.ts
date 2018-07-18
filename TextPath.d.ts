@@ -185,12 +185,12 @@ declare class TextPath
 	/**
 	 * Read-only. The path points contained in this path item.
 	 * @const
-	 * @type {PathPoints} {@link PathPoints} collection object
+	 * @type {PathPoints|PathPoint[]} {@link PathPoints} collection object
 	 * @see {@link TextPath}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pathPoints:PathPoints;
+	readonly pathPoints:PathPoints|PathPoint[];
 
 	/**
 	 * The polarity of the path.
@@ -221,12 +221,12 @@ declare class TextPath
 
 	/**
 	 * Read-only. All of the selected path points in the path.
-	 * @type {PathPoints} {@link PathPoints} collection object
+	 * @type {PathPoints|PathPoint[]} {@link PathPoints} collection object
 	 * @see {@link TextPath}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly selectedPathPoints:PathPoints;
+	readonly selectedPathPoints:PathPoints|PathPoint[];
 
 	/**
 	 * The type of line capping.
