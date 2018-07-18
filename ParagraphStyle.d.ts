@@ -44,7 +44,7 @@ declare class ParagraphStyle
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly paragraphAttributes:ParagraphAttributes;
+	readonly paragraphAttributes:ParagraphAttributes|ParagraphAttribute[];
 
 	/**
 	 * Read-only. The object’s container.

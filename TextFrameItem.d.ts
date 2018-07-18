@@ -96,12 +96,12 @@ declare class TextFrameItem extends PageItem
 	/**
 	 * Read-only. All the characters in this text frame.
 	 * @const
-	 * @type {Characters} {@link Characters} collection object
+	 * @type {Characters|TextRange[]} {@link Characters} collection object
 	 * @see {@link TextFrameItem}
 	 * @since CS5
 	 * @version CS5
 	 */
-	readonly characters:Characters;
+	readonly characters:Characters|TextRange[];
 
 	/**
 	 * The column count in the text frame (area text only).
@@ -160,12 +160,12 @@ declare class TextFrameItem extends PageItem
 	/**
 	 * Read-only. All the insertion points in this text range.
 	 * @const
-	 * @type {InsertionPoints} {@link InsertionPoints} collection object
+	 * @type {InsertionPoints|InsertionPoint[]} {@link InsertionPoints} collection object
 	 * @see {@link TextFrameItem}
 	 * @since CS5
 	 * @version CS5
 	 */
-	readonly insertionPoints:InsertionPoints;
+	readonly insertionPoints:InsertionPoints|InsertionPoint[];
 
 	/**
 	 * Read-only. The type of a text frame item (area, path or point).
@@ -180,12 +180,12 @@ declare class TextFrameItem extends PageItem
 	/**
 	 * Read-only. All the lines in this text frame.
 	 * @const
-	 * @type {Lines} {@link Lines} collection object
+	 * @type {Lines|TextRange[]} {@link Lines} collection object
 	 * @see {@link TextFrameItem}
 	 * @since CS5
 	 * @version CS5
 	 */
-	readonly lines:Lines;
+	readonly lines:Lines|TextRange[];
 
 	/**
 	 * Read-only. The transformation matrix for this text frame.
@@ -227,12 +227,12 @@ declare class TextFrameItem extends PageItem
 	/**
 	 * Read-only. All the paragraphs in this text frame.
 	 * @const
-	 * @type {Paragraphs} {@link Paragraphs} collection object
+	 * @type {Paragraphs|TextRange[]} {@link Paragraphs} collection object
 	 * @see {@link TextFrameItem}
 	 * @since CS5
 	 * @version CS5
 	 */
-	readonly paragraphs:Paragraphs;
+	readonly paragraphs:Paragraphs|TextRange[];
 
 	/**
 	 * Read-only. The parent of this object.
@@ -321,12 +321,12 @@ declare class TextFrameItem extends PageItem
 	/**
 	 * Read-only. All the text in this text frame.
 	 * @const
-	 * @type {TextRanges} {@link TextRanges} collection object
+	 * @type {TextRanges|TextRange[]} {@link TextRanges} collection object
 	 * @see {@link TextFrameItem}
 	 * @since CS5
 	 * @version CS5
 	 */
-	readonly textRanges:TextRanges;
+	readonly textRanges:TextRanges|TextRange[];
 
 	/**
 	 * Read-only. The selected text range(s) in the text frame.
@@ -351,12 +351,12 @@ declare class TextFrameItem extends PageItem
 	/**
 	 * Read-only. All the words in this text frame.
 	 * @const
-	 * @type {Words} {@link Words} collection objects
+	 * @type {Words|TextRange[]} {@link Words} collection objects
 	 * @see {@link TextFrameItem}
 	 * @since CS5
 	 * @version CS5
 	 */
-	readonly words:Words;
+	readonly words:Words|TextRange[];
 
 	/**
 	 * Converts the area-type text frame to a point-type text frame.

@@ -88,12 +88,12 @@ declare class Layer
 	/**
 	 * Read-only. The compound path items contained in this layer.
 	 * @const
-	 * @type {CompoundPathItems} {@link CompoundPathItems} collection object
+	 * @type {CompoundPathItems|CompoundPathItem[]} {@link CompoundPathItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly compoundPathItems:CompoundPathItems;
+	readonly compoundPathItems:CompoundPathItems|CompoundPathItem[];
 
 	/**
 	 * If <b>true</b>, placed images should be rendered as dimmed in this layer.
@@ -107,22 +107,22 @@ declare class Layer
 	/**
 	 * Read-only. The graph items contained in this layer.
 	 * @const
-	 * @type {GraphItems} {@link GraphItems} collection object
+	 * @type {GraphItems|GraphItem[]} {@link GraphItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly graphItems:GraphItems;
+	readonly graphItems:GraphItems|GraphItem[];
 
 	/**
 	 * Read-only. The group items contained in this layer.
 	 * @const
-	 * @type {GroupItems} {@link GroupItems} collection object
+	 * @type {GroupItems|GraphItem[]} {@link GroupItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly groupItems:GroupItems;
+	readonly groupItems:GroupItems|GraphItem[];
 
 	/**
 	 * If <b>true</b>, an object in this layer has been selected; set to <b>false</b> to deselect all objects in the layer.
@@ -145,22 +145,22 @@ declare class Layer
 	/**
 	 * Read-only. The layers contained in this layer.
 	 * @const
-	 * @type {Layers} {@link Layers} collection object
+	 * @type {Layers|Layer[]} {@link Layers} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly layers:Layers;
+	readonly layers:Layers|Layer[];
 
 	/**
 	 * Read-only. The legacy text items in this layer.
 	 * @const
-	 * @type {LegacyTextItems} {@link LegacyTextItems} collection object
+	 * @type {LegacyTextItems|LegacyTextItem[]} {@link LegacyTextItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly legacyTextItems:LegacyTextItems;
+	readonly legacyTextItems:LegacyTextItems|LegacyTextItem[];
 
 	/**
 	 * If <b>true</b>, this layer is editable; set to <b>false</b> to lock the layer.
@@ -174,12 +174,12 @@ declare class Layer
 	/**
 	 * Read-only. The mesh items contained in this layer.
 	 * @const
-	 * @type {MeshItems} {@link MeshItems} collection object
+	 * @type {MeshItems|MeshItem[]} {@link MeshItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly meshItems:MeshItems;
+	readonly meshItems:MeshItems|MeshItem[];
 
 	/**
 	 * The name of this layer.
@@ -211,12 +211,12 @@ declare class Layer
 	/**
 	 * Read-only. The page items (all art item classes) contained in this layer.
 	 * @const
-	 * @type {PageItems} {@link PageItems} collection object
+	 * @type {PageItems|PageItem[]} {@link PageItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pageItems:PageItems;
+	readonly pageItems:PageItems|PageItem[];
 
 	/**
 	 * Read-only. The document or layer that contains this layer.
@@ -231,32 +231,32 @@ declare class Layer
 	/**
 	 * Read-only. The path items contained in this layer.
 	 * @const
-	 * @type {PathItems} {@link PathItems} collection object
+	 * @type {PathItems|PageItem[]} {@link PathItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pathItems:PathItems;
+	readonly pathItems:PathItems|PageItem[];
 
 	/**
 	 * Read-only. The placed items contained in this layer.
 	 * @const
-	 * @type {PlacedItems} {@link PlacedItems} collection object
+	 * @type {PlacedItems|PageItem[]} {@link PlacedItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly placedItems:PlacedItems;
+	readonly placedItems:PlacedItems|PageItem[];
 
 	/**
 	 * Read-only. The plug-in items contained in this layer.
 	 * @const
-	 * @type {PluginItems} {@link PluginItems} collection object
+	 * @type {PluginItems|PluginItem[]} {@link PluginItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pluginItems:PluginItems;
+	readonly pluginItems:PluginItems|PluginItem[];
 
 	/**
 	 * If <b>true</b>, this layer should be displayed using preview mode.
@@ -279,12 +279,12 @@ declare class Layer
 	/**
 	 * Read-only. The raster items contained in this layer.
 	 * @const
-	 * @type {RasterItems} {@link RasterItems} collection object
+	 * @type {RasterItems|RasterItem[]} {@link RasterItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly rasterItems:RasterItems;
+	readonly rasterItems:RasterItems|RasterItem[];
 
 	/**
 	 * If <b>true</b>, the layer item is sliced. Default: <b>false</b>
@@ -298,22 +298,22 @@ declare class Layer
 	/**
 	 * Read-only. The symbol items contained in the layer.
 	 * @const
-	 * @type {SymbolItems} {@link SymbolItems} collection object
+	 * @type {SymbolItems|SymbolItem[]} {@link SymbolItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly symbolItems:SymbolItems;
+	readonly symbolItems:SymbolItems|SymbolItem[];
 
 	/**
 	 * Read-only. The text art items contained in this layer.
 	 * @const
-	 * @type {TextFrameItems} {@link TextFrameItems} collection object
+	 * @type {TextFrameItems|TextFrameItem[]} {@link TextFrameItems} collection object
 	 * @see {@link Layer}
 	 * @since CS2
 	 * @version CS5
 	 */
-	readonly textFrames:TextFrameItems;
+	readonly textFrames:TextFrameItems|TextFrameItem[];
 
 	/**
 	 * Read-only. The class name of the referenced object.
