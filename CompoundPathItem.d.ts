@@ -236,12 +236,12 @@ declare class CompoundPathItem extends PageItem
 	/**
 	 * Read-only. The path art items in this compound path.
 	 * @const
-	 * @type {PathItems} {@link PathItems} object
+	 * @type {PathItems|PathItem[]} {@link PathItems} collection object
 	 * @see {@link CompoundPathItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pathItems:PathItems;
+	readonly pathItems:PathItems|PathItem[];
 
 	/**
 	 * The position of the top left corner of the compound path item excluding stroke width.
@@ -273,12 +273,12 @@ declare class CompoundPathItem extends PageItem
 	/**
 	 * Read-only. The tags contained in this object.
 	 * @const
-	 * @type {Tags} {@link Tags} collection object
+	 * @type {Tags|Tag[]} {@link Tags} collection object
 	 * @see {@link CompoundPathItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly tags:Tags;
+	readonly tags:Tags|Tag[];
 
 	/**
 	 * The position of the top of the item.

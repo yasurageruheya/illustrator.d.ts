@@ -37,12 +37,12 @@ declare class Variable
 	/**
 	 * Read-only. All of the artwork n this document.
 	 * @const
-	 * @type {PageItems} {@link PageItems} collection object
+	 * @type {PageItems|PageItem[]} {@link PageItems} collection object
 	 * @see {@link Variable}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pageItems:PageItems;
+	readonly pageItems:PageItems|PageItem[];
 
 	/**
 	 * Read-only. The object that contains the variable.

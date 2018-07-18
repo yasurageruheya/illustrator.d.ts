@@ -73,22 +73,22 @@ declare class GraphItems
 	/**
 	 * Gets the first element in the collection with the specified name.
 	 * @param {String} name {@link String}
-	 * @return {GraphItems} {@link GraphItems} object
+	 * @return {GraphItems|GraphItem[]} {@link GraphItems} collection object
 	 * @see {@link GraphItems}
 	 * @since CS2
 	 * @version CS2
 	 */
-	getByName(name:String):GraphItems;
+	getByName(name:String):GraphItems|GraphItem[];
 
 	/**
 	 * Gets an element from the collection.
 	 * @param {String | Number} itemKey {@link String} or {@link Number}
-	 * @return {GraphItems} {@link GraphItems} object
+	 * @return {GraphItems|GraphItem[]} {@link GraphItems} collection object
 	 * @see {@link GraphItems}
 	 * @since CS2
 	 * @version CS2
 	 */
-	index(itemKey:String|Number):GraphItems;
+	index(itemKey:String|Number):GraphItems|GraphItem[];
 
 	/**
 	 * Deletes all elements in the collection.

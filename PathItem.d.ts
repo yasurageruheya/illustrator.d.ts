@@ -314,12 +314,12 @@ declare class PathItem extends PageItem
 	/**
 	 * Read-only. The path points contained in this path item.
 	 * @const
-	 * @type {PathPoints} {@link PathPoints} collection object
+	 * @type {PathPoints|PathPoint[]} {@link PathPoints} collection object
 	 * @see {@link PathItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pathPoints:PathPoints;
+	readonly pathPoints:PathPoints|PathPoint[];
 
 	/**
 	 * The polarity of the path.
@@ -359,12 +359,12 @@ declare class PathItem extends PageItem
 
 	/**
 	 * Read-only. All of the selected path points in the path.
-	 * @type {PathPoints} {@link PathPoints} collection object
+	 * @type {PathPoints|PathPoint[]} {@link PathPoints} collection object
 	 * @see {@link PathItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly selectedPathPoints:PathPoints;
+	readonly selectedPathPoints:PathPoints|PathPoint[];
 
 	/**
 	 * If <b>true</b>, the item is sliced. Default: <b>false</b>
@@ -459,12 +459,12 @@ declare class PathItem extends PageItem
 	/**
 	 * Read-only. The tags contained in this item.
 	 * @const
-	 * @type {Tags} {@link Tags} collection object
+	 * @type {Tags|Tag[]} {@link Tags} collection object
 	 * @see {@link PathItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly tags:Tags;
+	readonly tags:Tags|Tag[];
 
 	/**
 	 * The position of the top of the item.
@@ -621,7 +621,7 @@ declare class PathItem extends PageItem
 
 	/**
 	 * Sets the path using the specified anchor points.
-	 * @param {PathPoints} pathPoints {@link PathPoints} object
+	 * @param {PathPoints|PathPoint[]} pathPoints {@link PathPoints} object
 	 * @see {@link PathItem}
 	 * @since CS2
 	 * @version CS2

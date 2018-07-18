@@ -119,12 +119,12 @@ declare class GroupItem extends PageItem
 	/**
 	 * Read-only. The compound path items contained in this group.
 	 * @const
-	 * @type {CompoundPathItems} {@link CompoundPathItems} collection object
+	 * @type {CompoundPathItems|CompoundPathItem[]} {@link CompoundPathItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly compoundPathItems:CompoundPathItems;
+	readonly compoundPathItems:CompoundPathItems|CompoundPathItem[];
 
 	/**
 	 * Read-only. The bounds of the object including stroke width and controls.
@@ -159,22 +159,22 @@ declare class GroupItem extends PageItem
 	/**
 	 * Read-only. The graph items contained in this group.
 	 * @const
-	 * @type {GraphItems} {@link GraphItems} collection object
+	 * @type {GraphItems|GraphItem[]} {@link GraphItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly graphItems:GraphItems;
+	readonly graphItems:GraphItems|GraphItem[];
 
 	/**
 	 * Read-only. The group items contained in this group.
 	 * @const
-	 * @type {GroupItems} {@link GroupItems} collection object
+	 * @type {GroupItems|GroupItem[]} {@link GroupItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly groupItems:GroupItems;
+	readonly groupItems:GroupItems|GroupItem[];
 
 	/**
 	 * The height of the group item.
@@ -225,12 +225,12 @@ declare class GroupItem extends PageItem
 	/**
 	 * Read-only. The text frame items in this group.
 	 * @const
-	 * @type {LegacyTextItems}
+	 * @type {LegacyTextItems|LegacyTextItem[]}
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly legacyTextItems:LegacyTextItems;
+	readonly legacyTextItems:LegacyTextItems|LegacyTextItem[];
 
 	/**
 	 * If <b>true</b>, this group item is locked.
@@ -244,12 +244,12 @@ declare class GroupItem extends PageItem
 	/**
 	 * Read-only. The mesh items contained in this group.
 	 * @const
-	 * @type {MeshItems} {@link MeshItems} collection object
+	 * @type {MeshItems|MeshItem[]} {@link MeshItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly meshItems:MeshItems;
+	readonly meshItems:MeshItems|MeshItem[];
 
 	/**
 	 * The name of this group item.
@@ -272,12 +272,12 @@ declare class GroupItem extends PageItem
 	/**
 	 * Read-only. The page items (all art item classes) contained in this group.
 	 * @const
-	 * @type {PageItems} {@link PageItems} collection object
+	 * @type {PageItems|PageItem[]} {@link PageItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pageItems:PageItems;
+	readonly pageItems:PageItems|PageItem[];
 
 	/**
 	 * Read-only. The parent of this object.
@@ -292,32 +292,32 @@ declare class GroupItem extends PageItem
 	/**
 	 * Read-only. The path items contained in this group.
 	 * @const
-	 * @type {PathItems} {@link PathItems} collection object
+	 * @type {PathItems|PathItem[]} {@link PathItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pathItems:PathItems;
+	readonly pathItems:PathItems|PathItem[];
 
 	/**
 	 * Read-only. The placed items contained in this group.
 	 * @const
-	 * @type {PlacedItems} {@link PlacedItems} collection object
+	 * @type {PlacedItems|PlacedItem[]} {@link PlacedItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly placedItems:PlacedItems;
+	readonly placedItems:PlacedItems|PlacedItem[];
 
 	/**
 	 * Read-only. The plugin items contained in this group.
 	 * @const
-	 * @type {PluginItems} {@link PluginItems} collection object
+	 * @type {PluginItems|PluginItem[]} {@link PluginItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly pluginItems:PluginItems;
+	readonly pluginItems:PluginItems|PluginItem[];
 
 	/**
 	 * The position of the top left corner of the group item.
@@ -331,12 +331,12 @@ declare class GroupItem extends PageItem
 	/**
 	 * Read-only. The raster items contained in this group.
 	 * @const
-	 * @type {RasterItems} {@link RasterItems} collection object
+	 * @type {RasterItems|RasterItem[]} {@link RasterItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly rasterItems:RasterItems;
+	readonly rasterItems:RasterItems|RasterItem[];
 
 	/**
 	 * If <b>true</b>, this group item is selected.
@@ -359,32 +359,32 @@ declare class GroupItem extends PageItem
 	/**
 	 * Read-only. The symbol item objects in this group.
 	 * @const
-	 * @type {SymbolItems} {@link SymbolItems} collection object
+	 * @type {SymbolItems|SymbolItem[]} {@link SymbolItems} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly symbolItems:SymbolItems;
+	readonly symbolItems:SymbolItems|SymbolItem[];
 
 	/**
 	 * Read-only. The tags contained in this group.
 	 * @const
-	 * @type {Tags} {@link Tags} collection object
+	 * @type {Tags|Tag[]} {@link Tags} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly tags:Tags;
+	readonly tags:Tags|Tag[];
 
 	/**
 	 * Read-only. The text art items contained in this group.
 	 * @const
-	 * @type {TextFrames} {@link TextFrames} collection object
+	 * @type {TextFrames|TextFrame[]} {@link TextFrames} collection object
 	 * @see {@link GroupItem}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly textFrames:TextFrames;
+	readonly textFrames:TextFrames|TextFrame[];
 
 	/**
 	 * The position of the top of the item.

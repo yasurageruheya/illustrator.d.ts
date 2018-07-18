@@ -61,12 +61,12 @@ declare class Gradient
 	/**
 	 * Read-only. The gradient stops contained in this gradient.
 	 * @const
-	 * @type {GradientStops} {@link GradientStops} collection object
+	 * @type {GradientStops|GradientStop[]} {@link GradientStops} collection object
 	 * @see {@link Gradient}
 	 * @since CS2
 	 * @version CS2
 	 */
-	readonly gradientStops:GradientStops;
+	readonly gradientStops:GradientStops|GradientStop[];
 
 	/**
 	 * The gradient’s name.
